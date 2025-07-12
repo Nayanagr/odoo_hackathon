@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from './components/AdminLogin';
 import UserLoginPage from "./components/Login";
  import Dashboard from './components/DashBoard';
+import UserOnboarding from "./components/UserOnBoard";
+import Chat from "./components/Chat";
 
 const App = () => {
   return (
@@ -15,10 +17,9 @@ const App = () => {
 
         {/* Admin Login Page */}
         <Route path="/admin-login" element={<LoginPage />} />
-       
-
-
-<Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/user-onboarding" element={<UserOnboarding />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </Router>
   );
