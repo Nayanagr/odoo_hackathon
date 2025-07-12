@@ -4,13 +4,14 @@ import UserLoginPage from "./components/Login";
  import Dashboard from './components/DashBoard';
 import UserOnboarding from "./components/UserOnBoard";
 import Chat from "./components/Chat";
+import Homepage from "./components/Homepage";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Default route can redirect or be user login */}
-        <Route path="/" element={<UserLoginPage  />} />
+        {/* Homepage*/}
+        <Route path="/" element={<Homepage/>} />
 
         {/* User Login Page */}
         <Route path="/login" element={<UserLoginPage />} />
@@ -19,7 +20,8 @@ const App = () => {
         <Route path="/admin-login" element={<LoginPage />} />
         <Route path="/user-onboarding" element={<UserOnboarding />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/chat" element={<Chat />} />
+    <Route path="/chat" element={<Chat />} />
+         
       </Routes>
     </Router>
   );
